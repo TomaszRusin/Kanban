@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function generateTemplate(name, data, basicElement) {
         var template = document.getElementById(name).innerHTML;
         var element = document.createElement(basicElement || 'div');
+        element.classList.add('wrapper');
       
         Mustache.parse(template);
         element.innerHTML = Mustache.render(template, data);
@@ -54,7 +55,6 @@ document.addEventListener('DOMContentLoaded', function() {
         this.description = description;
         this.element = generateTemplate('card-template', { description: this.description }, 'li');
     
-        console.log(this)
         this.element.querySelector('.card').addEventListener('click', function (event) {
             event.stopPropagation();
         

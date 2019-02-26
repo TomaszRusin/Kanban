@@ -16,10 +16,14 @@
 
   <script id="column-template" type="x-tmpl-mustache">
     <div class="column">
-        <h2 class="column-title">{{ name }}</h2>
+        <div class="column-header">
+          <h2 class="column-title">{{ name }}</h2>
+          <div class="button-wrapper">
+            <button class="add-card">Add a card</button>
+            <button class="btn-delete">X</button>
+          </div>
+        </div>
         <ul id={{ id }} class="column-card-list"></ul>
-        <button class="btn-delete">X</button>
-        <button class="add-card">Add a card</button>
     </div>
 </script>
 
