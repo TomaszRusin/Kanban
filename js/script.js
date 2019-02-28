@@ -50,8 +50,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function Card(description) {
         var self = this;
-      
+        
         this.id = randomString();
+        
         this.description = description;
         this.element = generateTemplate('card-template', { description: this.description }, 'li');
     
@@ -76,13 +77,17 @@ document.addEventListener('DOMContentLoaded', function() {
         name: 'Kanban Board',
         addColumn: function(column) {
         this.element.appendChild(column.element);
-        initSortable(column.id); //About this feature we will tell later
+        console.log(this.element.appendChild(column.element))
+        initSortable(column.id);
+
         },
         element: document.querySelector('#board .column-container')
     };
 
     function initSortable(id) {
+        console.log(id)
         var el = document.getElementById(id);
+        console.log(document.getElementById(id))
         var sortable = Sortable.create(el, {
         group: 'kanban',
         sort: true

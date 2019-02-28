@@ -1,12 +1,12 @@
 html, body, .board { height: 100%; margin: 0 5px; text-align: center; }
 
-.column-container { display: flex; flex-direction: row; height: 100%; }
+.column-container { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; height: 100%; }
 
 .column-container > .wrapper { height: 90%; width: 33%; background-color: aliceblue; }
 
-.column { display: flex; flex-direction: column; justify-content: center; margin: 10px 20px; background-color: white; }
+.column { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-pack: center; justify-content: center; margin: 10px 20px; background-color: white; }
 
-.column-header { display: flex; flex-direction: row; justify-content: space-around; align-items: baseline; width: 90%; }
+.column-header { display: -ms-flexbox; display: flex; -ms-flex-direction: row; flex-direction: row; -ms-flex-pack: distribute; justify-content: space-around; -ms-flex-align: baseline; align-items: baseline; width: 90%; }
 
 .column-title, .create-column, .add-card, .btn-delete { margin: 5px; font-size: 24px; }
 
